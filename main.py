@@ -19,8 +19,16 @@ def import_dat(filename):
                 except ValueError:
                     print(f"Skipping line {line}")
     return counts, theta
-    
+
+def d_to_theta(d, lambda_k  = 1.5406):
+    return np.arcsin(lambda_k/2*d)
+
+def theta_to_d(theta, lambda_k = 1.5406):
+    return lambda_k/(2*np.sin(theta) 
+
+
 counts, theta = import_dat("diagrama.dat")
 
 plt.plot(theta,counts)
 plt.show()
+
